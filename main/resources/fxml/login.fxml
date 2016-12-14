@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="CENTER" prefHeight="395.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinigment.application.controller.LoginController">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/res/images/logo_01.png" />
+         </image>
+      </ImageView>
+      <GridPane alignment="CENTER" hgap="10.0" opacity="0.81" prefHeight="400.0" prefWidth="600.0" stylesheets="@metro/metrostyle/Metro-UI.css" vgap="10.0">
+         <children>
+            <Text fill="#2b579a" strokeType="OUTSIDE" strokeWidth="0.0" text="Login  Details" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+               <font>
+                  <Font name="Segoe UI Semibold" size="42.0" />
+               </font></Text>
+            <Text fill="#2b579a" strokeType="OUTSIDE" strokeWidth="0.0" text="Username: " GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Segoe UI Semilight" size="27.0" />
+               </font></Text>
+            <Text fill="#2b579a" strokeType="OUTSIDE" strokeWidth="0.0" text="Password: " GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Segoe UI Semilight" size="27.0" />
+               </font></Text>
+            <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Segoe UI Semilight" size="17.0" />
+               </font></TextField>
+            <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Segoe UI Semilight" size="17.0" />
+               </font></PasswordField>
+            <Button fx:id="button" minHeight="40.0" mnemonicParsing="false" onAction="#validateLoginDetails" prefWidth="120.0" styleClass="btn" stylesheets="@metro/metrostyle/Metro-UI.css" text="Log In" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Segoe UI Semibold" size="30.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Button>
+            <Text fx:id="confirmText" fill="#c60505" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font></Text>
+         </children>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints minHeight="35.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</HBox>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane fx:id="tabPane" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinigment.application.controller.AppointmentManagementController">
+<tabs>
+  <Tab closable="false" text="Appointment List">
+       <content>
+          
+       </content>
+  </Tab>
+  <Tab fx:id="addNewPatientTab" closable="false" text="Add New Appointment">
+         <content>
+            
+         </content>
+  </Tab>
+</tabs>
+</TabPane>

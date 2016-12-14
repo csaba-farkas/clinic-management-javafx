@@ -1,0 +1,13 @@
+
+/* 
+    Created on : 02-Apr-2016, 05:26:48
+    Author     : csaba
+*/
+
+.tree-view {
+    -fx-background-color:  #2b579a;
+}
+
+.tree-cell {
+    -fx-background-color:  #2b579a;
+}

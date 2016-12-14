@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinigment.application.controller.AddNewPatientController">
+   <children>
+      <AnchorPane fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1200.0" stylesheets="@metro/metrostyle/Metro-UI.css">
+         <children>
+            <ScrollPane layoutX="-1.0" layoutY="-1.0" prefWidth="600.0" AnchorPane.bottomAnchor="-26.0" AnchorPane.leftAnchor="-25.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <content>
+                  <GridPane hgap="5.0" prefWidth="594.0" vgap="5.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="50.0" prefHeight="80.0" valignment="TOP" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="10.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+
+
+                    </rowConstraints>
+                     <children>
+                        <Text fill="#2b579a" strokeType="OUTSIDE" strokeWidth="0.0" text="New Patient Details" GridPane.columnSpan="2147483647">
+                           <font>
+                              <Font name="Segoe UI" size="48.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#5273a4" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Details" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Segoe UI Semilight" size="24.0" />
+                           </font>
+                        </Text>
+                        <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </Separator>
+                        <Label styleClass="form-label" text="Title:" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <ComboBox fx:id="titleComboBox" prefWidth="180.0" promptText="--Please Select--" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3">
+                                <items>
+                                   <FXCollections fx:factory="observableArrayList">
+                                      <String fx:value="Mr" />
+                                      <String fx:value="Mrs" />
+                                      <String fx:value="Ms" />
+                                      <String fx:value="Dr" />
+                                   </FXCollections>
+
+                                </items>
+                        </ComboBox>
+                        <Label text="First Name:" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="firstNameField" prefHeight="27.0" prefWidth="280.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="middleNameField" prefHeight="27.0" prefWidth="280.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label text="Middle Name:" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Last Name:" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="PPS Number:" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Date of Birth:" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Gender:" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Mobile Phone:" GridPane.halignment="RIGHT" GridPane.rowIndex="11">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Home Phone: " GridPane.halignment="RIGHT" GridPane.rowIndex="12">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Email:" GridPane.halignment="RIGHT" GridPane.rowIndex="13">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="lastTextField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="ppsNumberField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="7">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <DatePicker fx:id="dateOfBirth" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                         <ComboBox fx:id="genderComboBox" prefHeight="27.0" prefWidth="180.0" promptText="--Please Select--" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                             <items>
+                                 <FXCollections fx:factory="observableArrayList">
+                                     <String fx:value="MALE" />
+                                     <String fx:value="FEMALE" />
+                                 </FXCollections>
+
+                             </items>
+                         </ComboBox>
+
+                        <TextField fx:id="mobilePhoneField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="11">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="homePhoneField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="12">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="13">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="nextButton1" mnemonicParsing="false" onAction="#goToNextScene" prefWidth="120.0" styleClass="btn" text="Add" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.halignment="RIGHT" GridPane.rowIndex="40">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Text fill="#5273a4" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.rowIndex="15">
+                           <font>
+                              <Font name="Segoe UI Semilight" size="24.0" />
+                           </font>
+                        </Text>
+                        <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="16">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </Separator>
+                        <Label text="Address Line 1:" GridPane.halignment="RIGHT" GridPane.rowIndex="17">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Address Line 2:" GridPane.halignment="RIGHT" GridPane.rowIndex="18">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Address Line 3:" GridPane.halignment="RIGHT" GridPane.rowIndex="19">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="City/Town:" GridPane.halignment="RIGHT" GridPane.rowIndex="20">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="County:" GridPane.halignment="RIGHT" GridPane.rowIndex="21">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Country:" GridPane.halignment="RIGHT" GridPane.rowIndex="22">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="addressLine1Field" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="17">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="addressLine2Field" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="18">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="addressLine3Field" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="19">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="cityTextField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="20">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="countyTextField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="21">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="countryTextField" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="22">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+
+
+
+
+
+
+
+
+
+
+
+                         <Text fill="#2b579a" strokeType="OUTSIDE" strokeWidth="0.0" text="New Patient Details" GridPane.columnSpan="2147483647">
+                             <font>
+                                 <Font name="Segoe UI" size="48.0" />
+                             </font>
+                         </Text>
+                         <Text fill="#5273a4" strokeType="OUTSIDE" strokeWidth="0.0" text="Next of Kin" GridPane.columnSpan="2147483647" GridPane.rowIndex="23">
+                             <font>
+                                 <Font name="Segoe UI Semilight" size="24.0" />
+                             </font>
+                         </Text>
+                         <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="24">
+                             <GridPane.margin>
+                                 <Insets right="10.0" />
+                             </GridPane.margin>
+                         </Separator>
+                         <Label text="First Name:" GridPane.halignment="RIGHT" GridPane.rowIndex="26">
+                             <GridPane.margin>
+                                 <Insets right="5.0" />
+                             </GridPane.margin>
+                         </Label>
+                         <TextField fx:id="nextOfKinFNameField" prefHeight="27.0" prefWidth="280.0" promptText="Next of Kin/Guardian First Name" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="26">
+                             <GridPane.margin>
+                                 <Insets right="10.0" />
+                             </GridPane.margin>
+                         </TextField>
+                         <TextField fx:id="nextOfKinMNameField" prefHeight="27.0" prefWidth="280.0" promptText="Next of Kin/Guardian Middle Name" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="27">
+                             <GridPane.margin>
+                                 <Insets right="10.0" />
+                             </GridPane.margin>
+                         </TextField>
+                         <Label text="Middle Name:" GridPane.halignment="RIGHT" GridPane.rowIndex="27">
+                             <GridPane.margin>
+                                 <Insets right="5.0" />
+                             </GridPane.margin>
+                         </Label>
+                         <Label text="Last Name:" GridPane.halignment="RIGHT" GridPane.rowIndex="28">
+                             <GridPane.margin>
+                                 <Insets right="5.0" />
+                             </GridPane.margin>
+                         </Label>
+                         <Label text="Contact Number:" GridPane.halignment="RIGHT" GridPane.rowIndex="29">
+                             <GridPane.margin>
+                                 <Insets right="5.0" />
+                             </GridPane.margin>
+                         </Label>
+                         <TextField fx:id="nextOfKinLNameField" promptText="Next of Kin/Guardian Last Name" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="28">
+                             <GridPane.margin>
+                                 <Insets right="10.0" />
+                             </GridPane.margin>
+                         </TextField>
+                         <TextField fx:id="nextOfKinContactField" promptText="Next of Kin/Guardian Contact Number" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="29">
+                             <GridPane.margin>
+                                 <Insets right="10.0" />
+                             </GridPane.margin>
+                         </TextField>
+
+                         <Text fill="#5273a4" strokeType="OUTSIDE" strokeWidth="0.0" text="Allergies" GridPane.rowIndex="30">
+                             <font>
+                                 <Font name="Segoe UI Semilight" size="24.0" />
+                             </font>
+                         </Text>
+                         <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="31">
+                             <GridPane.margin>
+                                 <Insets right="10.0" />
+                             </GridPane.margin>
+                         </Separator>
+                         <TextField fx:id="addAllergyTextField" promptText="In case of multiple allergies, add them individually..." GridPane.columnSpan="2" GridPane.rowIndex="32">
+                             <GridPane.margin>
+                                 <Insets left="5.0" right="10.0" />
+                             </GridPane.margin>
+                         </TextField>
+                         <Text fill="#5273a4" strokeType="OUTSIDE" strokeWidth="0.0" text="For patients under 18 years of age, please provide the name of the guardian" GridPane.columnSpan="2147483647" GridPane.rowIndex="25">
+                             <font>
+                                 <Font name="Segoe UI Light" size="14.0" />
+                             </font>
+                             <GridPane.margin>
+                                 <Insets />
+                             </GridPane.margin>
+                         </Text>
+                         <Button fx:id="addAllergyButton" mnemonicParsing="false" onAction="#addAlergyToTextBox" prefWidth="120.0" styleClass="btn" text="+" GridPane.columnIndex="2" GridPane.rowIndex="32" />
+                         <TextArea fx:id="allergyTextArea" disable="true" editable="false" prefHeight="22.0" prefWidth="594.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="33" GridPane.rowSpan="5">
+                             <GridPane.margin>
+                                 <Insets left="5.0" right="5.0" />
+                             </GridPane.margin>
+                         </TextArea>
+
+                     </children>
+                  </GridPane>
+               </content>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </padding>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</StackPane>

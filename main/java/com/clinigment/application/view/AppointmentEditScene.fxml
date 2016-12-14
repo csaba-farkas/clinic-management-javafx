@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinigment.application.controller.AppointmentEditSceneController">
+   <children>
+      <AnchorPane fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1200.0">
+         <children>
+            <ScrollPane layoutX="-1.0" layoutY="-1.0" prefWidth="600.0" AnchorPane.bottomAnchor="-26.0" AnchorPane.leftAnchor="-25.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <content>
+                  <GridPane fx:id="gridPane" hgap="8.0" prefWidth="594.0" vgap="8.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="50.0" prefHeight="80.0" valignment="TOP" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="50.0" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text fill="#2b579a" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Appointment" GridPane.columnSpan="2147483647">
+                           <font>
+                              <Font name="Segoe UI" size="48.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#5273a4" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Details" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Segoe UI Semilight" size="24.0" />
+                           </font>
+                        </Text>
+                        <Separator prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </Separator>
+                        <Label styleClass="form-label" text="Date:" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Start Time:" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="End Time:" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="First Name:" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Last Name:" GridPane.halignment="RIGHT" GridPane.rowIndex="10">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Contact Number:" GridPane.halignment="RIGHT" GridPane.rowIndex="11">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Doctor/Hygienist:" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                         <DatePicker fx:id="datePicker" promptText="Select Date" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                         <ComboBox fx:id="doctorSearchCombo" disable="true" prefHeight="33.0" prefWidth="194.0" promptText="--Please Select--" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                         <ComboBox fx:id="startTimeCombo" disable="true" prefHeight="33.0" prefWidth="194.0" promptText="Select Time" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                         <ComboBox fx:id="endTimeCombo" disable="true" prefHeight="33.0" prefWidth="194.0" promptText="End Time" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                         <CheckBox fx:id="isExistingPatient" mnemonicParsing="false" text="Existing Patient" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+                         <ComboBox fx:id="patientSearchCombo" disable="true" prefHeight="33.0" prefWidth="375.0" promptText="Search..." GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="8" />
+                         <TextField fx:id="firstNameField" promptText="Enter First Name" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="9">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="lastNameField" promptText="Enter Last Name" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="10">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                         <TextField fx:id="contactNumberField" promptText="Enter Contact Number" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="11">
+                             <GridPane.margin>
+                                 <Insets right="10.0" />
+                             </GridPane.margin>
+                         </TextField>
+
+                         <TextArea fx:id="descriptionArea" prefHeight="200.0" prefWidth="200.0" promptText="Enter treatments required and other relevant information..." GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="12" GridPane.rowSpan="6">
+                             <GridPane.margin>
+                                 <Insets right="10.0" />
+                             </GridPane.margin>
+                         </TextArea>
+                        <Button fx:id="updateButton" mnemonicParsing="false" prefWidth="120.0" styleClass="btn" text="Update" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="RIGHT" GridPane.rowIndex="19">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Label text="Description:" GridPane.halignment="RIGHT" GridPane.rowIndex="12">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Id:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                        <TextField fx:id="idField" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button fx:id="backButton" mnemonicParsing="false" prefWidth="120.0" styleClass="btn" text="Back" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+
+
+
+                     </children>
+                  </GridPane>
+               </content>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </padding>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+         <stylesheets>
+            <URL value="@metro/metrostyle/Metro-UI.css" />
+            <URL value="@css/AddNewPatientStyle.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxWidth="1200.0" minHeight="600.0" minWidth="600.0" stylesheets="@metro/metrostyle/Metro-UI.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinigment.application.controller.AppointmentTableSceneController">
+   <children>
+      <TableView fx:id="tableView" onMouseClicked="#showAppointmentData">
+              <columns>
+                  <TableColumn fx:id="colAction" prefWidth="130.0" resizable="false" text="ACTION">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@metro/img/hash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colFirstName" prefWidth="165.0" text="PATIENT ID">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@metro/img/hash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colLastName" prefWidth="164.0" text="NAME">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@metro/img/hash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colPpsNumber" minWidth="20.0" prefWidth="180.0" text="CONTACT NUMBER">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@metro/img/hash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colDateOfBirth" prefWidth="118.0" text="TREATMENT NAME">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@metro/img/hash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colMobilePhone" prefWidth="300.0" text="DATE">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@metro/img/hash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colHomePhone" prefWidth="300.0" text="START TIME">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@metro/img/hash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colEmail" prefWidth="300.0" text="END TIME">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@metro/img/hash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                  </TableColumn>
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+         <StackPane.margin>
+            <Insets left="15.0" right="15.0" top="100.0" />
+         </StackPane.margin>
+            </TableView>
+      <Text fill="#2b579a" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointments" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="15.0" top="15.0" />
+         </StackPane.margin>
+         <font>
+            <Font name="Segoe UI" size="48.0" />
+         </font>
+      </Text>
+      <Separator prefWidth="200.0" StackPane.alignment="TOP_CENTER">
+         <StackPane.margin>
+            <Insets left="15.0" right="15.0" top="80.0" />
+         </StackPane.margin>
+      </Separator>
+      <Button fx:id="updateButton" mnemonicParsing="false" styleClass="btn" text="New" StackPane.alignment="TOP_RIGHT">
+         <StackPane.margin>
+            <Insets right="25.0" top="30.0" />
+         </StackPane.margin>
+         <font>
+            <Font name="Segoe UI Semilight" size="18.0" />
+         </font>
+      </Button>
+      <TextField maxWidth="200.0" prefWidth="100.0" promptText="Search..." StackPane.alignment="TOP_RIGHT">
+         <StackPane.margin>
+            <Insets right="150.0" top="30.0" />
+         </StackPane.margin>
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</StackPane>

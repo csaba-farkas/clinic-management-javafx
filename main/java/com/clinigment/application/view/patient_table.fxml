@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<TableView fx:id="table" prefHeight="1000.0" prefWidth="1200.0" stylesheets="@metro/metrostyle/Metro-UI.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinigment.application.controller.PatientTableController">
+ <columns>
+     <TableColumn fx:id="lastNameCol" editable="false" text="Last Name" />
+     <TableColumn fx:id="firstNameCol" editable="false" text="First Name" />
+     <TableColumn fx:id="ppsCol" editable="false" text="PPS Number" />
+     <TableColumn fx:id="dobCol" editable="false" text="Date of Birth" />
+     <TableColumn fx:id="mobileCol" editable="false" text="Mobile Phone" />
+     <TableColumn fx:id="emailCol" editable="false" text="Email" />
+ </columns>
+</TableView>

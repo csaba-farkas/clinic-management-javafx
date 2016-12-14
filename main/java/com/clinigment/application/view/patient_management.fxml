@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane fx:id="tabPane" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.clinigment.application.controller.PatientManagementController">
+<tabs>
+  <Tab closable="false" text="Patients">
+       <content>
+          <BorderPane fx:id="tableBorderPane" prefHeight="200.0" prefWidth="200.0">
+             <!-- <top>
+                <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                   <children>
+                      <TextField fx:id="searchField" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" prefWidth="175.0">
+                         <font>
+                            <Font size="9.0" />
+                         </font></TextField>
+                   </children>
+                   <padding>
+                      <Insets right="5.0" />
+                   </padding>
+                </HBox>
+             </top>-->
+             <padding>
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+             </padding>
+             <!-- <bottom>
+                <HBox prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                   <children>
+                      <Label text="test" />
+                   </children>
+                </HBox>
+             </bottom> -->
+               <center>
+                  
+               </center>
+          </BorderPane>
+       </content>
+  </Tab>
+  <Tab fx:id="addNewPatientTab" closable="false" text="Add New Patient">
+         <content>
+            <BorderPane fx:id="newPatientBorderPane" prefHeight="200.0" prefWidth="200.0" />
+         </content>
+  </Tab>
+</tabs>
+</TabPane>
